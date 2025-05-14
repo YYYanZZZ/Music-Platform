@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.YinlekuDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.entity.YinlekuEntity" id="yinlekuMap">
+        <result property="bianhao" column="bianhao"/>
+        <result property="geming" column="geming"/>
+        <result property="yinlebiaoqian" column="yinlebiaoqian"/>
+        <result property="tupian" column="tupian"/>
+        <result property="yanchangzhe" column="yanchangzhe"/>
+        <result property="zuoqu" column="zuoqu"/>
+        <result property="zuoci" column="zuoci"/>
+        <result property="yinleshipin" column="yinleshipin"/>
+        <result property="yinle" column="yinle"/>
+        <result property="gequjieshao" column="gequjieshao"/>
+        <result property="thumbsupnum" column="thumbsupnum"/>
+        <result property="crazilynum" column="crazilynum"/>
+        <result property="clicktime" column="clicktime"/>
+        <result property="clicknum" column="clicknum"/>
+    </resultMap>
+
+	<select id="selectListVO"
+		resultType="com.entity.vo.YinlekuVO" >
+		SELECT * FROM yinleku  yinleku         
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectVO"
+		resultType="com.entity.vo.YinlekuVO" >
+		SELECT  yinleku.* FROM yinleku  yinleku
+ 		<where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+
+    <select id="selectListView"
+		resultType="com.entity.view.YinlekuView" >
+
+		SELECT  yinleku.* FROM yinleku  yinleku 	        
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectView"
+		resultType="com.entity.view.YinlekuView" >
+		SELECT * FROM yinleku  yinleku <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	
+</mapper>

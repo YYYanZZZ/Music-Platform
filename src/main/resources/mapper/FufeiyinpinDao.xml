@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.FufeiyinpinDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.entity.FufeiyinpinEntity" id="fufeiyinpinMap">
+        <result property="bianhao" column="bianhao"/>
+        <result property="geming" column="geming"/>
+        <result property="yinlebiaoqian" column="yinlebiaoqian"/>
+        <result property="yanchangzhe" column="yanchangzhe"/>
+        <result property="jiage" column="jiage"/>
+        <result property="yonghuming" column="yonghuming"/>
+        <result property="yinpin" column="yinpin"/>
+    </resultMap>
+
+	<select id="selectListVO"
+		resultType="com.entity.vo.FufeiyinpinVO" >
+		SELECT * FROM fufeiyinpin  fufeiyinpin         
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectVO"
+		resultType="com.entity.vo.FufeiyinpinVO" >
+		SELECT  fufeiyinpin.* FROM fufeiyinpin  fufeiyinpin
+ 		<where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+
+    <select id="selectListView"
+		resultType="com.entity.view.FufeiyinpinView" >
+
+		SELECT  fufeiyinpin.* FROM fufeiyinpin  fufeiyinpin 	        
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectView"
+		resultType="com.entity.view.FufeiyinpinView" >
+		SELECT * FROM fufeiyinpin  fufeiyinpin <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	
+</mapper>
