@@ -25,9 +25,7 @@
 
 > A modern, full-featured music platform built with Spring, SpringMVC and MyBatis (SSM framework).
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/light-theme/example.svg" alt="Music Platform">
-</p>
+
 
 ### 🚀 Features
 
@@ -83,9 +81,7 @@ This project is [MIT](LICENSE) licensed.
 
 > 一个使用Spring、SpringMVC和MyBatis（SSM框架）构建的现代化全功能音乐平台。
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/light-theme/example.svg" alt="音乐平台">
-</p>
+
 
 ### 🚀 功能特点
 
